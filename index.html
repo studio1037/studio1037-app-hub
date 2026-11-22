@@ -1,62 +1,67 @@
 <!doctype html>
 <html lang="ru">
+<head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#0c1322">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#101826">
+<meta name="description" content="Studio1037 App Hub: проверенные ссылки на приложения, исходники и среды разработки.">
 <title>Studio1037 · App Hub</title>
 <style>
-:root{color-scheme:dark;--bg:#0c1322;--panel:#131f34;--line:#304158;--text:#edf3ff;--muted:#b3c1d8;--accent:#a4efd0}
-*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 70% 0,#1d2b47,transparent 60%),var(--bg);color:var(--text);font:1rem/1.55 system-ui,sans-serif}
-main{max-width:1050px;margin:auto;padding:clamp(1rem,5vw,3rem)}header{padding:1.4rem 0 2rem;border-bottom:1px solid var(--line);margin-bottom:1.5rem}.brand{letter-spacing:.14em;color:var(--accent);font-weight:750}
-h1{font-size:clamp(2.7rem,8vw,5.5rem);line-height:1;letter-spacing:-.065em;margin:.5rem 0 1rem}h2{font-size:1.35rem;margin:0 0 .5rem}.muted,dt{color:var(--muted)}
-.apps{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,285px),1fr));gap:1rem}article{background:var(--panel);border:1px solid var(--line);border-radius:1rem;padding:1.1rem;min-width:0}
-dl{display:grid;grid-template-columns:max-content minmax(0,1fr);gap:.45rem .8rem;margin:0}dt,dd{margin:0;font-size:.95rem}dd{overflow-wrap:anywhere}a{color:var(--accent);text-underline-offset:.15em}a:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
-footer{margin-top:2rem;padding-top:1.3rem;border-top:1px solid var(--line);color:var(--muted)}
+:root{color-scheme:dark;--bg:#101826;--panel:#182538;--edge:#34465b;--text:#edf3fa;--muted:#becddd;--accent:#9fe7c9;--focus:#ffd27d}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 90% 0%,#263c55,transparent 65%),var(--bg);color:var(--text);font:16px/1.5 system-ui,-apple-system,Segoe UI,sans-serif}
+main{max-width:1160px;padding:clamp(18px,4vw,50px);margin:auto}header{margin-bottom:28px} .eyebrow{color:var(--accent);font-weight:750;letter-spacing:.12em;font-size:.85rem}
+h1{font-size:clamp(2.4rem,7vw,4.5rem);letter-spacing:-.05em;margin:8px 0;line-height:1.08}h2{font-size:1.35rem;margin:0}p{margin:9px 0} .muted{color:var(--muted)}
+.toolbar{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:26px 0}input{font:inherit;color:var(--text);background:#111d2e;border:1px solid var(--edge);border-radius:10px;padding:12px 14px;flex:1 1 230px;min-width:0}
+.counter{color:var(--muted);font-size:.92rem}.apps{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,315px),1fr));gap:16px}article{background:var(--panel);border:1px solid var(--edge);border-radius:17px;padding:20px;min-width:0;display:flex;flex-direction:column;gap:12px}
+.card-top{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}.pill{font-size:.74rem;line-height:1.3;font-weight:700;border:1px solid #67788a;border-radius:100px;padding:5px 9px;white-space:nowrap;background:#263648}
+.pill.verified{border-color:#538e7c;color:#a8f7d7}.pill.development{border-color:#b79556;color:#ffe0a8}
+.description{color:var(--muted);min-height:3em;margin:0}.meta{display:grid;grid-template-columns:auto minmax(0,1fr);gap:5px 12px;font-size:.9rem;margin:0}.meta dt{color:var(--muted)}.meta dd{margin:0;overflow-wrap:anywhere}.meta small{display:block;color:var(--muted)}
+.actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto}.button{appearance:none;border:1px solid #618b83;color:var(--text);background:#23463f;padding:9px 13px;border-radius:10px;text-decoration:none;font:600 .9rem/1.4 system-ui;cursor:pointer}
+.button.primary{background:var(--accent);color:#0d2622;border-color:var(--accent)}.button.secondary{background:transparent;border-color:var(--edge)}.button:disabled{opacity:.55;cursor:not-allowed}a{color:var(--accent)}
+:focus-visible{outline:3px solid var(--focus);outline-offset:3px}.note{color:var(--muted);font-size:.84rem;margin:0}.empty{border:1px dashed var(--edge);border-radius:12px;padding:20px;color:var(--muted)}
+footer{color:var(--muted);border-top:1px solid var(--edge);margin-top:32px;padding-top:18px;font-size:.9rem}#notice{min-height:1.5em;color:var(--accent)}
+@media(max-width:450px){article{padding:16px}.card-top{flex-direction:column}.actions>*{flex:1 1 auto;text-align:center}}
+@media(prefers-reduced-motion:no-preference){.button{transition:filter .15s}.button:hover{filter:brightness(1.12)}}
 </style>
+</head>
+<body>
 <main>
-<header><div class="brand">STUDIO1037</div><h1>App Hub</h1><p class="muted">Приложения, стабильные сборки и среды разработки.</p></header>
-<section class="apps" aria-label="Реестр приложений">
-<article><h2>PHAZE</h2><dl>
-<dt>Production</dt><dd><a href="https://studio1037.github.io/studio1037-phaze/">Открыть PHAZE</a></dd>
-<dt>DEV</dt><dd><a href="https://studio1037-phaze-dev.andypeshkov.chatgpt.site/">Открыть v0.2 DEV</a> · доступ владельца</dd>
-<dt>GitHub</dt><dd><a href="https://github.com/studio1037/studio1037-phaze">Репозиторий</a> · <a href="https://github.com/studio1037/studio1037-phaze/tree/v0.2">Ветка v0.2</a></dd>
-<dt>Стабильная</dt><dd>v0.1.2</dd>
-<dt>Публикация</dt><dd>Production доступен</dd>
-<dt>Проверено</dt><dd><time datetime="2026-11-22">22.11.2026</time></dd>
-</dl></article>
-<article><h2>Morning Timer</h2><dl>
-<dt>Production</dt><dd><a href="https://studio1037.github.io/morningtimer/">Открыть Morning Timer</a></dd>
-<dt>DEV</dt><dd>Постоянный URL не подтверждён</dd>
-<dt>GitHub</dt><dd><a href="https://github.com/studio1037/morningtimer">Репозиторий</a></dd>
-<dt>Стабильная</dt><dd>v2.9 ранее подтверждена владельцем. Версия по этому адресу не подтверждена; README репозитория указывает v2.4-a.8.</dd>
-<dt>Публикация</dt><dd>Production доступен</dd>
-<dt>Проверено</dt><dd><time datetime="2026-11-22">22.11.2026</time></dd>
-</dl></article>
-<article><h2>Life in Weeks</h2><dl>
-<dt>Production</dt><dd><a href="https://life-in-weeks-4000-studio1037.pages.dev/">Открыть Life in Weeks</a></dd>
-<dt>DEV</dt><dd>Постоянный URL не подтверждён</dd>
-<dt>GitHub</dt><dd><a href="https://github.com/studio1037/life-in-weeks">Репозиторий</a></dd>
-<dt>Стабильная</dt><dd>v1.2</dd>
-<dt>Публикация</dt><dd>Production доступен</dd>
-<dt>Проверено</dt><dd><time datetime="2026-11-22">22.11.2026</time></dd>
-</dl></article>
-<article><h2>Class Project Room</h2><dl>
-<dt>Production</dt><dd><a href="https://class-project-room.andypeshkov.chatgpt.site/">Открыть Class Project Room</a></dd>
-<dt>DEV</dt><dd>Постоянный URL не подтверждён</dd>
-<dt>GitHub</dt><dd>Публичный репозиторий не подтверждён</dd>
-<dt>Стабильная</dt><dd>Публикация Sites №11</dd>
-<dt>Публикация</dt><dd>Production доступен</dd>
-<dt>Проверено</dt><dd><time datetime="2026-11-22">22.11.2026</time></dd>
-</dl></article>
-<article><h2>CS Class Timer</h2><dl>
-<dt>Production</dt><dd><a href="https://cs-class-timer.andypeshkov.chatgpt.site/">Открыть CS Class Timer</a></dd>
-<dt>DEV</dt><dd>Постоянный URL не подтверждён</dd>
-<dt>GitHub</dt><dd>Публичный репозиторий не подтверждён</dd>
-<dt>Стабильная</dt><dd>Публикация Sites №15</dd>
-<dt>Публикация</dt><dd>Production доступен</dd>
-<dt>Проверено</dt><dd><time datetime="2026-11-22">22.11.2026</time></dd>
-</dl></article>
-</section>
-<footer><strong>Порядок релизов.</strong> Стабильная версия хранится в <code>main</code>. Разработка идёт в отдельной ветке и проверяется по постоянному DEV-адресу. Production обновляется после проверки и подтверждения владельца.</footer>
+<header><div class="eyebrow">STUDIO1037 · PRODUCT DIRECTORY</div><h1>App Hub</h1><p class="muted">Одна точка входа в приложения, тестовые среды и исходный код. Ссылки и степень их проверки указаны явно.</p></header>
+<div class="toolbar"><input id="search" type="search" aria-label="Поиск приложения" placeholder="Найти приложение..." autocomplete="off"><span class="counter" id="count"></span></div>
+<section class="apps" id="apps" aria-label="Приложения Studio1037"><p class="muted">Загружаем реестр…</p></section>
+<p id="notice" role="status" aria-live="polite"></p>
+<footer><p>Production — стабильная публикация. DEV — отдельная тестовая среда, только если адрес подтверждён. Проверка страницы не означает полного функционального тестирования.</p><p id="registry-meta"></p><p>Обновление production — только после QA и согласования владельца. <a href="https://github.com/studio1037/studio1037-app-hub">Исходники App Hub</a>.</p></footer>
 </main>
-</html>
+<script>
+"use strict";
+const STATUS = new Set(["Verified","In Development","Not Deployed","Needs Verification","Archived"]);
+const labels={"Verified":"Verified","In Development":"In Development","Not Deployed":"Not Deployed","Needs Verification":"Needs Verification","Archived":"Archived"};
+const root=document.getElementById("apps"),count=document.getElementById("count"),notice=document.getElementById("notice"),meta=document.getElementById("registry-meta");
+const search=document.getElementById("search");
+let records=[];
+function el(tag,cls,text){const n=document.createElement(tag);if(cls)n.className=cls;if(text!==undefined)n.textContent=text;return n}
+function safeUrl(s){if(typeof s!=="string")return null;try{const u=new URL(s);return u.protocol==="https:"?u.href:null}catch{return null}}
+function status(value){return STATUS.has(value)?value:"Needs Verification"}
+function badge(value){const s=status(value),n=el("span","pill"+(s==="Verified"?" verified":s==="In Development"?" development":""),labels[s]);return n}
+function link(url,text,cls){const a=el("a","button "+(cls||""),text);a.href=url;a.target="_blank";a.rel="noopener noreferrer";return a}
+function addDetail(dl,title,value){dl.append(el("dt","",title),el("dd","",value||"Не подтверждено"))}
+function actionCopy(url){const b=el("button","button secondary","Копировать ссылку");b.type="button";b.addEventListener("click",async()=>{try{if(navigator.clipboard&&window.isSecureContext){await navigator.clipboard.writeText(url)}else{const field=document.createElement("textarea");field.value=url;field.style.position="fixed";field.style.opacity="0";document.body.append(field);field.select();if(!document.execCommand("copy"))throw Error("copy unavailable");field.remove()}notice.textContent="Ссылка скопирована"}catch{notice.textContent="Не удалось скопировать. Откройте ссылку и скопируйте адрес из браузера."}});return b}
+function renderCard(app){
+ const card=el("article");const head=el("div","card-top");head.append(el("h2","",app.name),badge(app.status));card.append(head,el("p","description",app.description||""));
+ const dl=el("dl","meta");addDetail(dl,"Stable",app.stableVersion);addDetail(dl,"Разработка",app.developmentVersion||"Нет данных");addDetail(dl,"Проверено",app.production?.checkedAt||"Не подтверждено");card.append(dl);
+ const actions=el("div","actions"),p=safeUrl(app.production?.url),d=safeUrl(app.development?.url),gh=safeUrl(app.github);
+ if(p){actions.append(link(p,"Открыть","primary"),actionCopy(p))}else{const b=el("button","button primary","Не опубликовано");b.disabled=true;actions.append(b)}
+ if(d&&app.development?.status==="Verified"){actions.append(link(d,"DEV","secondary"))}
+ else{const b=el("button","button secondary","DEV: не подтверждён");b.disabled=true;actions.append(b)}
+ if(gh)actions.append(link(gh,"GitHub","secondary"));
+ card.append(actions);
+ if(p)card.append(el("p","note","Production: "+status(app.production?.status)));
+ if(app.production?.verification)card.append(el("p","note",app.production.verification));
+ if(app.note)card.append(el("p","note",app.note));
+ return card
+}
+function render(){const q=search.value.trim().toLocaleLowerCase("ru");const filtered=records.filter(a=>(a.name+" "+(a.description||"")).toLocaleLowerCase("ru").includes(q));root.replaceChildren();if(!filtered.length)root.append(el("p","empty","Ничего не найдено"));for(const app of filtered)root.append(renderCard(app));count.textContent=filtered.length+" из "+records.length}
+async function load(){try{const response=await fetch("./apps.json",{cache:"no-store"});if(!response.ok)throw Error("HTTP "+response.status);const data=await response.json();if(!Array.isArray(data.apps))throw Error("invalid registry");const ids=new Set;records=data.apps.filter(a=>{if(!a||typeof a.id!=="string"||typeof a.name!=="string"||ids.has(a.id))return false;ids.add(a.id);return true});meta.textContent="Registry "+(data.registryVersion||"—")+" · Updated "+(data.updatedAt||"—");render()}catch(e){root.replaceChildren(el("p","empty","Не удалось загрузить apps.json. Попробуйте обновить страницу."));count.textContent="Реестр недоступен";notice.textContent="Ошибка загрузки реестра."}}
+search.addEventListener("input",render);load();
+</script>
+</body></html>
