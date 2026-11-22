@@ -1,0 +1,119 @@
+{
+  "schemaVersion": 1,
+  "registryVersion": "0.2.0-rc.1",
+  "updatedAt": "2026-11-22",
+  "statusValues": [
+    "Verified",
+    "In Development",
+    "Not Deployed",
+    "Needs Verification",
+    "Archived"
+  ],
+  "apps": [
+    {
+      "id": "phaze",
+      "name": "PHAZE",
+      "description": "Визуальный планировщик 16-часового дня.",
+      "production": {
+        "url": "https://studio1037.github.io/studio1037-phaze/",
+        "status": "Verified",
+        "checkedAt": "2026-11-22",
+        "verification": "Browser rendered public v0.1.2 interface; no functional regression test"
+      },
+      "development": {
+        "url": null,
+        "status": "Needs Verification",
+        "note": "Адрес v0.2 ограниченного доступа указан в предыдущем реестре, публичная доступность не проверена."
+      },
+      "github": "https://github.com/studio1037/studio1037-phaze",
+      "stableVersion": "v0.1.2",
+      "developmentVersion": "v0.2",
+      "status": "In Development",
+      "note": "Supabase, синхронизация и QA — ответственность PHAZE WORKER."
+    },
+    {
+      "id": "morning-timer",
+      "name": "Morning Timer",
+      "description": "Семейный таймер утренних дел с этапами и копилкой времени.",
+      "production": {
+        "url": "https://studio1037.github.io/morningtimer/",
+        "status": "Needs Verification",
+        "checkedAt": null,
+        "verification": "Точная опубликованная версия ещё не сверена с GitHub"
+      },
+      "development": {
+        "url": null,
+        "status": "Not Deployed",
+        "note": "Постоянная DEV-публикация не подтверждена."
+      },
+      "github": "https://github.com/studio1037/morningtimer",
+      "stableVersion": "v2.9 (по подтверждению владельца)",
+      "developmentVersion": null,
+      "status": "Needs Verification",
+      "note": "README main описывает v2.4-a.8; ветка restore/v2.9-stable присутствует."
+    },
+    {
+      "id": "life-in-weeks",
+      "name": "Life in Weeks",
+      "description": "Дневник жизни на 4000 недель: воспоминания и фотографии.",
+      "production": {
+        "url": "https://life-in-weeks-4000-studio1037.pages.dev/",
+        "status": "Needs Verification",
+        "checkedAt": null,
+        "verification": "URL указан в App Hub; прямая проверка страницы в текущем цикле не состоялась"
+      },
+      "development": {
+        "url": null,
+        "status": "Not Deployed",
+        "note": "Постоянный DEV URL не подтверждён."
+      },
+      "github": "https://github.com/studio1037/life-in-weeks",
+      "stableVersion": "v1.2 (по GitHub)",
+      "developmentVersion": "development/v1.2 (ветка)",
+      "status": "Needs Verification",
+      "note": "Требуется тест импорта/экспорта и восстановления фотографий."
+    },
+    {
+      "id": "class-project-room",
+      "name": "Class Project Room",
+      "description": "Командная рабочая комната ученических проектов.",
+      "production": {
+        "url": "https://class-project-room.andypeshkov.chatgpt.site/",
+        "status": "Verified",
+        "checkedAt": "2026-11-22",
+        "verification": "Browser rendered login screen; authorization and data operations not tested"
+      },
+      "development": {
+        "url": null,
+        "status": "Not Deployed",
+        "note": "DEV URL неизвестен."
+      },
+      "github": null,
+      "stableVersion": "Не установлена (Sites)",
+      "developmentVersion": null,
+      "status": "Needs Verification",
+      "note": "Нет подтверждённого GitHub SOURCE; требуется проверка входа и сохранения."
+    },
+    {
+      "id": "cs-class-timer",
+      "name": "CS Class Timer",
+      "description": "Настраиваемый 40-минутный таймер урока Computer Science.",
+      "production": {
+        "url": "https://cs-class-timer.andypeshkov.chatgpt.site/",
+        "status": "Verified",
+        "checkedAt": "2026-11-22",
+        "verification": "Browser rendered 40-minute setup page; timer behavior not regression-tested"
+      },
+      "development": {
+        "url": null,
+        "status": "Not Deployed",
+        "note": "DEV URL неизвестен."
+      },
+      "github": null,
+      "stableVersion": "Не установлена (Sites)",
+      "developmentVersion": null,
+      "status": "Needs Verification",
+      "note": "Нужны тесты запуска, паузы, завершения и сохранения настроек."
+    }
+  ]
+}
