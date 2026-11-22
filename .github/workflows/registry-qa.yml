@@ -1,0 +1,22 @@
+name: App Hub Registry QA
+on:
+  pull_request:
+    paths:
+      - 'apps.json'
+      - 'index.html'
+      - 'tests/**'
+      - '.github/workflows/registry-qa.yml'
+  push:
+    branches:
+      - main
+jobs:
+  registry:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node --test tests/registry.test.mjs
